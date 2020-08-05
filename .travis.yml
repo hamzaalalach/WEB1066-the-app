@@ -3,7 +3,7 @@ language: java
 env:
   - JDK_VERSION=oraclejdk8
   - JDK_VERSION=oraclejdk9
-jdk: "echo $JDK_VERSION"
+jdk: $JDK_VERSION
 install:
   - "./gradlew clean jar"
 script:
