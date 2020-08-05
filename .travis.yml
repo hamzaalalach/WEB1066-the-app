@@ -12,11 +12,11 @@ env:
   jobs:
     - RELPATH=monolithic/ui
     - RELPATH=monolithic/service/cart
-    # - RELPATH=monolithic/service/user
-    # - RELPATH=monolithic/repository/order
-    # - RELPATH=monolithic/repository/cart
-    # - RELPATH=monolithic/repository/product
-    # - RELPATH=monolithic/repository/user
+    - RELPATH=monolithic/service/user
+    - RELPATH=monolithic/repository/order
+    - RELPATH=monolithic/repository/cart
+    - RELPATH=monolithic/repository/product
+    - RELPATH=monolithic/repository/user
 install:
   - ./gradlew clean jar
 script:
