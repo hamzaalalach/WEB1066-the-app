@@ -3,7 +3,10 @@ language: java
 jdk:
   - oraclejdk8
   - oraclejdk9
+env:
+  - RELPATH=monolithic/ui
+  - RELPATH=monolithic/service/cart
 install:
   - "./gradlew clean jar"
 script:
-  - COVERAGE="$COVERAGE" ./gradlew -p ./monolithic/ui check
+  - COVERAGE="$COVERAGE" ./gradlew -p "./${RELPATH}" check
