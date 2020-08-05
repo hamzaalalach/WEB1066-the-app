@@ -24,6 +24,7 @@ script:
 after_success:
   - set -e;
     if [ "${RELPATH}" = "monolithic/ui" ]; then
+      docker login -u="$DOCKER_LOGIN" -p="$DOCKER_PASSWORD";
       ./gradlew -p ./monolithic/ui packageToContainer;
     fi;
 deploy:
