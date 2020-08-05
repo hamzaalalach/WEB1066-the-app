@@ -11,7 +11,7 @@ env:
     - secure: RxbcnSf8rEuJ4aVVZ01hnzd5/qyJb23MDPYzmUwXvM9MJFY9qUt+IGCGO8C3YFuCermU6gff9F5zb/4yBxl4LffhMMLesrGFj7j3vppVayKRRlX890dhAqdCJTE2SFtAIxT2rUSEcg3gpXM8YN//Ahkuj6ox5FTgQOyamNG7UZDPdOsgUzL8rzMEUfaOiVou191UMesPaSMLeppyevNPH9odlrQ3LaB7wugl2Tv27J0GkUn2WACz9I2jYHT3Az+wk9GbDbUPG53uBap0F5j9RReSzXr8GozZPKdBikZbgDKC2jBJlynB8dPTsFJFz6tzsJU+orNowzEu4gnHcFEEA3AfLwsuprv8DXVfMTHrI8UinGh+yXpIRS9wOb0/IeBGV7zVdL4tZ0OdGNMv4xGrGYl77uAsDkXNJVituunkvE3dHump4c47JXvAEUrukUdXLMiAUQk/xrR2YzAK+qYJznyBLPk2NHZY7UwKDDOtkgp1inPaDpxiUppKlm33anN1RKlicVAjtlBmZDEaAI4CJiaE3JQOA4TecbFyp/pu7lAsTvmsMNVd0U45oZAlqb/9eaka/7vWBCd2rl2negglc/0wT/jWBJFwomQU+fWwduXuhqKTofvoY03+Gl/VrITvtKiHLJ8ZjJyDknKkPsQdr/1MddlqgrIToExx/PA13Dc=
   jobs:
     - RELPATH=monolithic/ui
-    # - RELPATH=monolithic/service/cart
+    - RELPATH=monolithic/service/cart
     # - RELPATH=monolithic/service/user
     # - RELPATH=monolithic/repository/order
     # - RELPATH=monolithic/repository/cart
