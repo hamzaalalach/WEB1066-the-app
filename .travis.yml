@@ -21,11 +21,11 @@ install:
   - ./gradlew clean jar
 script:
   - COVERAGE="$COVERAGE" ./gradlew -p "./${RELPATH}" check
-# after_success:
-#   - set -e;
-#     if [ "${RELPATH}" = "monolithic/ui" ]; then
-#       ./gradlew -p ./monolithic/ui packageToContainer;
-#     fi;
+after_success:
+  - set -e;
+    if [[ "${RELPATH}" = "monolithic/ui" && "${jdk}" = "oraclejdk8" ]]; then
+      ./gradlew -p ./monolithic/ui packageToContainer;
+    fi;
 deploy:
   provider: script
   script: bash script/deploy.sh
