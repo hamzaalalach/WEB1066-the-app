@@ -3,8 +3,14 @@ language: java
 env:
   - JDK_VERSION=oraclejdk8
   - JDK_VERSION=oraclejdk9
-jdk: "${JDK_VERSION}"
-install:
-  - "./gradlew clean jar"
-script:
-  - COVERAGE="$COVERAGE" ./gradlew -p ./monolithic/ui check
+stages:
+  - tests
+jobs:
+  include:
+    - stage: tests
+      name: "ui 8"
+      jdk: "$JDK_VERSION"
+      install:
+        - ./gradlew clean jar
+      script:
+        - COVERAGE="$COVERAGE" ./gradlew -p ./monolithic/ui check
