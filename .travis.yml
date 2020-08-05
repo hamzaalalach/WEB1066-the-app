@@ -31,4 +31,5 @@ deploy:
   script: bash script/deploy.sh
   on:
     branch: master
-    condition: RELPATH=monolithic/ui && jdk=oraclejdk8
+    condition: $RELPATH = monolithic/ui
+    jdk: oraclejdk8
